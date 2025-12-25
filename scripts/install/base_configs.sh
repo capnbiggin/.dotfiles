@@ -5,9 +5,9 @@ ACTUAL_USER="${SUDO_USER:-$USER}"
 ACTUAL_HOME=$(eval echo "~$ACTUAL_USER")
 
 # Script Directory
-SCRIPTS_DIR="$ACTUAL_HOME"/.dotfiles/scripts
+SCRIPTS_DIR="$ACTUAL_HOME"/git_repos/capndot/scripts
 # Base configs Directory
-BASE_CONFIG_DIR="$ACTUAL_HOME"/.dotfiles/base
+BASE_CONFIG_DIR="$ACTUAL_HOME"/git_repos/capndot/base
 # Config Directory
 CONFIG_DIR="$ACTUAL_HOME"/.config
 

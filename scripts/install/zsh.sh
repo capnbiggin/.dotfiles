@@ -5,7 +5,7 @@ ACTUAL_USER="${SUDO_USER:-$USER}"
 ACTUAL_HOME=$(eval echo "~$ACTUAL_USER")
 
 # Dotfiles Directory
-DOTFILES_DIR="$ACTUAL_HOME"/.dotfiles
+DOTFILES_DIR="$ACTUAL_HOME"/git_repos/capndot
 # Script Directory
 SCRIPTS_DIR="$DOTFILES_DIR"/scripts
 # Dotfiles Configs

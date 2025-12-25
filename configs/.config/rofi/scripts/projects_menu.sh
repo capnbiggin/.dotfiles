@@ -5,7 +5,7 @@ ACTUAL_USER="${SUDO_USER:-$USER}"
 ACTUAL_HOME=$(eval echo "~$ACTUAL_USER")
 
 # Script Directory
-SCRIPTS_DIR="$ACTUAL_HOME"/.dotfiles/scripts
+SCRIPTS_DIR="$ACTUAL_HOME"/git_repos/capndot/scripts
 
 set -eu
 
@@ -14,15 +14,10 @@ TERM="ghostty"
 
 # Directories
 REPO="$ACTUAL_HOME/git_repos"
-MY_BRAIN="$ACTUAL_HOME/Documents/My-Brain"
 
 # Pick repo
 configs="$(find "$REPO"/*/ -maxdepth 0 -print0 | xargs -0 -n1 basename)"
 [ -n "$configs" ] || exit 0
-#scripts="$(basename "$SCRIPTS_DIR")"
-#[ -n "$scripts" ] || exit 0
-#brain="$(basename "$MY_BRAIN")"
-#[ -n "$brain" ] || exit 0
 chosen="$(printf '%s\n' "$configs" |
   rofi -dmenu -p 'Projects:')"
 [ -n "$chosen" ] || exit 0
