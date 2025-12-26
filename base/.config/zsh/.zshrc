@@ -59,7 +59,9 @@ autoload -U colors && colors
 #           Prompt               #
 ##################################
 
-if [ -d $HOME/.config/zsh/plugins/pure ]; then
+if [[ -x $(command -v oh-my-posh) ]]; then
+  eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/myprompt.toml)"
+elif [ -d $HOME/.config/zsh/plugins/pure ]
   PURE_GIT_PULL=0
 
   fpath+=($HOME/.config/zsh/plugins/pure)
